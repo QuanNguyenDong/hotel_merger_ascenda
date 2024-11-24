@@ -32,7 +32,8 @@ class Acme(BaseSupplier):
                 lng=dto.get('Longitude'),
                 address=(dto.get('Address') or '').strip(),
                 city=dto.get('City'),
-                country=dto.get('Country')
+                country=dto.get('Country'),
+                postcode=dto.get('PostalCode')
             ),
             amenities=Amenities(
                 general=(dto.get('Facilities') or [])

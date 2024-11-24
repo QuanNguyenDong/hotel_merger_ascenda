@@ -43,11 +43,13 @@ class Location:
     address: str
     city: str = ""
     country: str = ""
+    postcode: str = ""
     
     def merge(self, location: 'Location'):
         self.address = merge_str(self.address, location.address)
         self.city    = merge_str(self.city, location.city)
         self.country = merge_str(self.country, location.country)
+        self.postcode = merge_str(self.postcode, location.postcode)
     
     def to_dict(self):
         return {
